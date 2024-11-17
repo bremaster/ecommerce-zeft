@@ -47,7 +47,7 @@ export const LpHikidemono: React.FC = () => {
     <Box position="relative">
       <MenuAppBar giftBoxButton={howManyInCart > 0} />
 
-      <HeroCover isMobile={isXsSize} />
+      <HeroCover />
       <HikidemonoService isMdSize={isMdSize} />
       <HikidemonoUse isMdSize={isMdSize} />
       <HikidemonoCarousel howManyInCart={howManyInCart} isMdSize={isMdSize} />
