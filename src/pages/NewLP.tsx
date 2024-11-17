@@ -47,7 +47,7 @@ export const LpHome: React.FC = () => {
     <Box position="relative">
       <MenuAppBar giftBoxButton={howManyInCart > 0} />
 
-      <HeroCover isMobile={isXsSize} />
+      <HeroCover />
       <Service isMdSize={isMdSize} />
       <Use isMdSize={isMdSize} />
       <Carousel howManyInCart={howManyInCart} isMdSize={isMdSize} />
