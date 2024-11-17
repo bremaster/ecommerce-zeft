@@ -58,8 +58,8 @@ export type Product = {
     }[]
   }
   keyMessage: string
-  price: number
-  tax: number
+  price?: number
+  tax?: number
   productPrice: number
   shippingFee: {
     minFee: number
@@ -102,7 +102,7 @@ export type Product = {
     }[]
   }
   scenes: string[]
-  noshi: boolean
+  noshi?: boolean
   stockOk: undefined | boolean // if undefined, stock fetching is on going
 }
 

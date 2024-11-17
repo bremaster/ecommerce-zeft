@@ -109,8 +109,6 @@ const QUERY_GET_ALL_PRODUCTS = gql`
           }
         }
         keyMessage
-        price
-        tax
         productPrice
         shippingFee {
           minFee
@@ -119,7 +117,6 @@ const QUERY_GET_ALL_PRODUCTS = gql`
           okinawaFee
           undeliverable
         }
-        noshi
         productIntroduction
         productImageCloudinary
         brand {

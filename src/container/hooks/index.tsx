@@ -70,8 +70,6 @@ const PRODUCT_DETAIL_FRAGMENT = gql`
       }
     }
     keyMessage
-    price
-    tax
     productPrice
     shippingFee {
       minFee
@@ -80,7 +78,6 @@ const PRODUCT_DETAIL_FRAGMENT = gql`
       okinawaFee
       undeliverable
     }
-    noshi
     productIntroduction
     productImageCloudinary
     category
@@ -153,7 +150,6 @@ const QUERY_GET_PRODUCTS_WITH_FILTER = gql`
     $scene: String
     $minPrice: Int
     $maxPrice: Int
-    $sortKeys: [ProductDetailOrder]
   ) {
     productDetailCollection(
       preview: ${isPreview}
@@ -165,7 +161,6 @@ const QUERY_GET_PRODUCTS_WITH_FILTER = gql`
         scenes_contains_some: [$scene]
         category_contains_some: $category
       }
-      order: $sortKeys
     ) {
       total
       items {
