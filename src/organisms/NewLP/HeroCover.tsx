@@ -1,26 +1,58 @@
 import React from 'react'
 
-import { Stack } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 
-export const HeroCover: React.FC<{ isMobile: boolean }> = ({ isMobile = true }) => {
-  const videoSrc = isMobile
-    ? 'https://res.cloudinary.com/zeft/video/upload/v1659428113/zeft_landing/movie-480-480_c6qjkd.mp4'
-    : 'https://res.cloudinary.com/zeft/video/upload/v1659428113/zeft_landing/movie-1920-1080_mc0kbr.mp4'
-
+export const HeroCover = () => {
   return (
-    <Stack alignItems="center" sx={{ overflow: 'hidden', width: '100%' }}>
-      {/* Add key prop to rerender video */}
-      <video
-        loop
-        muted
-        autoPlay
-        controls={false}
-        playsInline={true}
-        key={videoSrc}
-        style={{ width: '100%' }}
+    <Stack
+      alignItems="center"
+      sx={{
+        overflow: 'hidden',
+        width: '100%',
+        pt: 10,
+        gap: 10
+      }}
+    >
+      <Stack
+        alignItems="start"
+        sx={{
+          maxWidth: 1200,
+          width: '80%'
+        }}
       >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
+        {/* Add key prop to rerender video */}
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: 36,
+            fontWeight: 700,
+            fontFamily: "Outfit",
+            color: "#101010"
+          }}
+        >
+          会いに行くように
+        </Typography>
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: 36,
+            fontWeight: 700,
+            fontFamily: "Outfit",
+            color: "#101010"
+          }}
+        >
+          デジタルでギフトを贈ろう
+        </Typography>
+      </Stack>
+      <Stack>
+        <Box
+          component="img"
+          src="https://zeft.app/home/FV.png"
+          sx={{
+            width: 2000
+          }}
+        />
+      </Stack>
     </Stack>
   )
 }
